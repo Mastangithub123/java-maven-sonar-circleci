@@ -8,10 +8,6 @@ jobs:
       - checkout
 
       - run:
-          name: Change to Project Directory
-          command: cd /home/circleci/project/my-java-project
-
-      - run:
           name: Set up Java 8 and Maven 3.9
           command: |
             java -version
@@ -20,14 +16,14 @@ jobs:
       - run:
           name: Build and Test
           command: |
-           cd my-java-project
-           mvn clean install
+            cd my-java-project
+            mvn clean install
 
       - run:
           name: Deploy to SonarQube
           command: |
-          cd my-java-project
-          mvn sonar:sonar -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.login=$SONAR_AUTH_TOKEN
+            cd my-java-project
+            mvn sonar:sonar -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.login=$SONAR_AUTH_TOKEN
 
 workflows:
   version: 2
