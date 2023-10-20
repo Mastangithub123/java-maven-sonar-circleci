@@ -4,7 +4,6 @@ jobs:
   build:
     docker:
       - image: circleci/openjdk:8
-    working_directory: my-java-project/src/main/java/com/myapp   # Specify the path to your Maven project directory
     steps:
       - checkout
 
