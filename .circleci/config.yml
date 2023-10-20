@@ -17,7 +17,7 @@ jobs:
           name: Build and Test
           command: |
             cd src/main/java/com/myapp
-            mvn clean install
+            mvn clean install -X
 
       - run:
           name: Deploy to SonarQube
