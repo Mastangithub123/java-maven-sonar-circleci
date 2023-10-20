@@ -4,6 +4,12 @@
     <artifactId>my-java-project</artifactId>
     <version>1.0.0</version>
 
+    <!-- Properties for SonarQube configuration -->
+    <properties>
+        <sonar.host.url>http://localhost:9000</sonar.host.url> <!-- Replace with your SonarQube server URL -->
+        <sonar.login>80be99ab5dd15155e5ef57f2dce3b161d736c069</sonar.login> <!-- Replace with your SonarQube authentication token -->
+    </properties>
+
     <dependencies>
         <!-- Example dependencies go here -->
     </dependencies>
@@ -26,9 +32,6 @@
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.7.0.1746</version>
-                <configuration>
-                    <sonar.host.url>http://localhost:9000</sonar.host.url>
-                </configuration>
             </plugin>
         </plugins>
     </build>
