@@ -23,7 +23,7 @@ jobs:
           name: Deploy to SonarQube
           command: |
             cd src/main/java/com/myapp
-            mvn sonar:sonar -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.login=$SONAR_AUTH_TOKEN
+            mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=80be99ab5dd15155e5ef57f2dce3b161d736c069
 
 workflows:
   version: 2
