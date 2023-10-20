@@ -16,13 +16,13 @@ jobs:
       - run:
           name: Build and Test
           command: |
-            cd java-maven-circleci
+            cd src/main/java/com/myapp
             mvn clean install
 
       - run:
           name: Deploy to SonarQube
           command: |
-            cd java-maven-circleci
+            cd src/main/java/com/myapp
             mvn sonar:sonar -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.login=$SONAR_AUTH_TOKEN
 
 workflows:
