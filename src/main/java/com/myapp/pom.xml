@@ -5,16 +5,9 @@
     <version>1.0.0</version>
 
     <dependencies>
-        <!-- Example: 
-        <dependency>
-            <groupId>group-id</groupId>
-            <artifactId>artifact-id</artifactId>
-            <version>version</version>
-        </dependency>
-        -->
+        <!-- Example dependencies go here -->
     </dependencies>
 
-    <!-- Build configuration including SonarQube -->
     <build>
         <plugins>
             <!-- Compiler Plugin -->
@@ -33,17 +26,8 @@
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.7.0.1746</version>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sonar</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
-                    <sonar.host.url>${sonar.host.url}</sonar.host.url>
-                    <sonar.login>${sonar.login}</sonar.login>
+                    <sonar.host.url>http://localhost:9000</sonar.host.url>
                 </configuration>
             </plugin>
         </plugins>
