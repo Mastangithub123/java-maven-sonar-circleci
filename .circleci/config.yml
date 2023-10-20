@@ -8,6 +8,10 @@ jobs:
       - checkout
 
       - run:
+          name: Change to Project Directory
+          command: cd /home/circleci/project/my-java-project |
+
+      - run:
           name: Set up Java 8 and Maven 3.9
           command: |
             java -version
