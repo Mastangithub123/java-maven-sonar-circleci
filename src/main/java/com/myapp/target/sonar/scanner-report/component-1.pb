@@ -1,0 +1,1 @@
+my-java-project :Rcom.example:my-java-project

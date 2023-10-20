@@ -6,8 +6,8 @@
 
     <!-- Properties for SonarQube configuration -->
     <properties>
-        <sonar.host.url>$SONAR_AUTH_TOKEN</sonar.host.url> <!-- Replace with your SonarQube server URL -->
-        <sonar.login>$SONAR_HOST_URL</sonar.login> <!-- Replace with your SonarQube authentication token -->
+        <sonar.host.url>http://localhost:9000</sonar.host.url> <!-- Replace with your SonarQube server URL -->
+        <sonar.login>80be99ab5dd15155e5ef57f2dce3b161d736c069</sonar.login> <!-- Replace with your SonarQube authentication token -->
     </properties>
 
     <dependencies>
