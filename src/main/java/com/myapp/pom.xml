@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- ... -->
+    <properties>
+        <!-- ... -->
+        <!-- SonarQube configuration -->
+        <sonar.host.url>http://localhost:9000</sonar.host.url> <!-- Change to your SonarQube server URL -->
+        <sonar.login>your-sonar-token</sonar.login> <!-- Replace with your SonarQube authentication token -->
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- ... -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

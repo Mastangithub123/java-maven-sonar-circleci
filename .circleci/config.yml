@@ -1,0 +1,35 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:8
+
+    steps:
+      - checkout
+
+      - run:
+          name: Set up Java 8 and Maven 3.9
+          command: |
+            java -version
+            mvn -version
+
+      - run:
+          name: Build and Test
+          command: |
+            mvn clean install
+
+      # Add a step to run your tests here
+
+      - run:
+          name: Deploy to SonarQube
+          command: |
+            mvn sonar:sonar \
+              -Dsonar.host.url=<Your_SonarQube_URL> \
+              -Dsonar.login=<Your_SonarQube_Token>
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
